@@ -20,9 +20,10 @@ void printList(struct Node *n)
     printf("\n");
 }
 
+struct Node *head = NULL;
+
 int main()
 {
-    struct Node *head = NULL;
     struct Node *one = NULL;
     struct Node *second = NULL;
     struct Node *third = NULL;
@@ -72,10 +73,10 @@ int main()
     printf("After inserting data in last node: \n");
     printList(head);
 
-    // inserting data in middle node in possition 2
+    // inserting data in middle node in possition
 
     int possition;
-    printf("Enter possition (from 1-6): ");
+    printf("Enter possition (from 1-5): ");
     scanf("%d", &possition);
 
     struct Node *newMiddleNode = malloc(sizeof(struct Node));
@@ -83,7 +84,7 @@ int main()
     newMiddleNode->next = NULL;
 
     temp = head;
-    for (int i = 1; i < possition - 1; i++)
+    for (int i = 1; i < possition; i++)
     {
         temp = temp->next;
     }
@@ -118,7 +119,7 @@ int main()
 
     // Delete Data from middle node in possition user input possition
 
-    printf("Enter possition (from 1-5): ");
+    printf("Enter possition (from 1-4): ");
     scanf("%d", &possition);
 
     temp = head;
